@@ -1,2 +1,2 @@
-# prestamos_django
+# inventory
 Sistema de préstamos de activos
