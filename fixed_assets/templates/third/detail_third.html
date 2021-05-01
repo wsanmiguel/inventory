@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+
+{% block content %}
+
+<table>
+    <tr>
+        <td>Tipo Id:</td>
+        <td>{{third.document_type.name}}</td>
+    </tr>
+    <tr>
+        <td>Id:</td>
+        <td>{{third.identification}}</td>
+    </tr>
+    <tr>
+        <td>Nombre:</td>
+        <td>{{third.first_name}} {{third.last_name}}</td>
+    </tr>
+    <tr>
+        <td>Dirección:</td>
+        <td>{{third.address}}</td>
+    </tr>
+    <tr>
+        <td>Teléfono:</td>
+        <td>{{third.phone}}</td>
+    </tr>
+</table>
+
+{% endblock %}

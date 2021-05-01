@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+
+{% block content %}
+<h2>Nuevo Tipo de Documento</h2>
+  <div class="card mt-3" style="width: 50rem;">
+    <form action="{% url 'new_third' %}" method="POST">
+      {% csrf_token %}
+      {% for field in form %}
+
+          <div class="fieldWrapper">
+              {{ field.errors }}
+              {{ field.label_tag }}
+              <br>
+              {{ field }}
+              {% if field.help_text %}
+              <p class="help">{{ field.help_text|safe }}</p>
+              <br>
+              {% endif %}
+          </div>
+      {% endfor %}
+      <button type="submit" class="mt-2 btn btn-primary">Guardar</button>
+    </form>
+  </div>
+{% endblock %}

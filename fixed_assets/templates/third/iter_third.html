@@ -1,0 +1,22 @@
+<table class="table table-hover table-striped">
+    <thead>
+        <tr>
+            <th>Ver</th>
+            <th>Tipo Id</th>
+            <th>Identificación</th>
+            <th>Nombres</th>
+            <th>Apellidos</th>
+        </tr>    
+    </thead>
+    <tbody>
+        {% for third in thirds %}
+            <tr>
+                <td><a href="{% url 'get_third' third.identification %}"> Ver </a></td>
+                <td>{{ third.document_type.name }}</td>
+                <td>{{ third.identification }}</td>
+                <td>{{ third.first_name }}</td>
+                <td>{{ third.last_name }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>

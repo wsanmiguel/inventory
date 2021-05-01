@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+
+{% block content %}
+
+<table>
+    <tr>
+        <td>Id:</td>
+        <td>{{document_type.id}}</td>
+    </tr>
+    <tr>
+        <td>Nombre:</td>
+        <td>{{document_type.name}}</td>
+    </tr>
+</table>
+
+{% endblock %}

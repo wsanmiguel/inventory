@@ -1,0 +1,18 @@
+<table class="table table-hover table-striped">
+    <thead>
+        <tr>
+            <th>Ver</th>
+            <th>Id</th>
+            <th>Nombre</th>
+        </tr>    
+    </thead>
+    <tbody>
+        {% for document_type in document_types %}
+            <tr>
+                <td><a href="{% url 'get_document_type' document_type.id %}"> Ver </a></td>
+                <td>{{ document_type.id }}</td>
+                <td>{{ document_type.name }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>

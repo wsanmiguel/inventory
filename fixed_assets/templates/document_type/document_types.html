@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+
+{% block content %}
+    <a class="btn btn-primary btn-lg mt-3" href="{% url 'new_document_type' %}" role="button">Nuevo</a>
+    {% include 'document_type/iter_document_type.html' %}
+{% endblock %}
